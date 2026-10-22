@@ -601,7 +601,11 @@ export function LudoEmpireApp() {
             </button>
 
             {/* Gold Balance */}
-            <div className="flex items-center gap-1 px-1.5 sm:px-2.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-black/85 border border-amber-500/35">
+            <div
+              className={`${
+                screen === 'match' ? 'hidden sm:flex' : 'flex'
+              } items-center gap-1 px-1.5 sm:px-2.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-black/85 border border-amber-500/35`}
+            >
               <Coins className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-400 shrink-0" />
               <span className="font-mono font-bold text-[10px] sm:text-xs text-amber-200 whitespace-nowrap">
                 {goldBalance.toLocaleString()}

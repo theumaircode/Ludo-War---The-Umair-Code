@@ -74,6 +74,7 @@ export function ArmorySkinsModal({
             <button
               type="button"
               onClick={onClose}
+              aria-label="Close Skins Vault"
               className="p-2 rounded-lg bg-black/60 border border-amber-500/30 text-amber-200 hover:text-white cursor-pointer"
             >
               <X className="w-5 h-5" />
@@ -84,10 +85,10 @@ export function ArmorySkinsModal({
         {/* Category Tabs */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 p-3 sm:p-4 bg-black/45 border-b border-amber-500/15">
           {[
-            { id: 'piece', label: '3D Piece Skins', icon: Shield },
-            { id: 'dice', label: 'Planet & Meteor Dice', icon: Sparkles },
-            { id: 'board', label: 'Cosmic Boards', icon: Palette },
-            { id: 'env', label: 'Space Scenery', icon: Sparkles },
+            { id: 'piece', label: '3D Pieces', icon: Shield },
+            { id: 'dice', label: 'Planet Dice', icon: Sparkles },
+            { id: 'board', label: 'War Boards', icon: Palette },
+            { id: 'env', label: 'Space Sky', icon: Sparkles },
           ].map((tab) => {
             const Icon = tab.icon
             const isActive = activeTab === tab.id
