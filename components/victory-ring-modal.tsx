@@ -57,11 +57,13 @@ export function VictoryRingModal({
                 key={sculpt.id}
                 className="p-1.5 rounded-xl bg-black/70 border border-amber-400/40 flex flex-col items-center"
               >
-                <img
-                  src={sculpt.image}
-                  alt={sculpt.name}
-                  className="w-11 h-11 rounded-lg object-cover border border-amber-300/40"
-                />
+                <div className="w-11 h-11 rounded-lg overflow-hidden border border-amber-300/40 bg-black">
+                  <img
+                    src={sculpt.image}
+                    alt={sculpt.name}
+                    className="w-full h-full object-cover scale-[1.24] origin-[36%_40%]"
+                  />
+                </div>
                 <span className="text-[9px] font-display font-bold text-amber-200 mt-1">
                   {sculpt.shortLabel}
                 </span>
