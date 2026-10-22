@@ -575,7 +575,7 @@ export function LudoEmpireApp() {
                 </span>
               </div>
               <div className="text-[8px] sm:text-[10px] font-display font-bold tracking-widest uppercase text-amber-400/90 whitespace-nowrap leading-none">
-                THE UMAIR CODE®
+                THE UMAIR CODE
               </div>
             </div>
           </div>
@@ -1044,12 +1044,15 @@ export function LudoEmpireApp() {
                       />
                     </div>
                   ) : (
-                    <img
-                      src={inspectedSculptMeta.image}
-                      alt={inspectedSculptMeta.name}
-                      className="h-full w-auto rounded-xl object-cover border border-amber-400/40"
-                      style={{ filter: PIECE_SKINS[pieceSkin].imageFilter }}
-                    />
+                    <div className="relative h-full aspect-[16/10] rounded-xl overflow-hidden border border-amber-400/45 shadow-[0_0_25px_rgba(0,0,0,0.75)] bg-black">
+                      <img
+                        key={inspectedSculptMeta.id}
+                        src={inspectedSculptMeta.image}
+                        alt={inspectedSculptMeta.name}
+                        className="w-full h-full object-cover scale-[1.22] origin-[38%_46%] select-none pointer-events-none"
+                        style={{ filter: PIECE_SKINS[pieceSkin].imageFilter }}
+                      />
+                    </div>
                   )}
                 </div>
 
