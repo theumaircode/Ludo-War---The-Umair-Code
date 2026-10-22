@@ -184,6 +184,12 @@ export function LudoEmpireApp() {
 
   const aiTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(() => {})
+    }
+  }, [])
+
   const toggleSound = () => {
     const next = !soundEnabled
     setSoundEnabled(next)
